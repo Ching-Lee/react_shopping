@@ -1,0 +1,25 @@
+
+.info{
+    padding: 10px;
+
+}
+.info_top{
+    border-bottom: solid #cccccc 1px;
+}
+.info_top img{
+   width:130px;
+    float: left;
+}
+.info_content{
+    float: left;
+    margin-left: 10px;
+}
+
+.info_content h3{
+    margin: 0px;
+    float:left;
+}
+
+p.info_bottom{
+    margin-bottom:5px ;
+}

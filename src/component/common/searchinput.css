@@ -1,0 +1,20 @@
+/*中间搜索框*/
+.middle_header{
+    width: 80%;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.middle_header i{
+    color:#ccc
+}
+
+.middle_header input{
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0;
+    border: 0;
+    width: 80%;
+}

@@ -1,0 +1,30 @@
+.carousel ul{
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.circle{
+    text-align: center;
+    padding-left: 0px;
+}
+
+.circle li{
+    list-style: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #ccc;
+    margin:0 4px;
+    display: inline-block;
+}
+
+li.selected{
+    background-color: red;
+}
+
+.carousel a{
+    text-decoration: none;
+    color: black;
+}

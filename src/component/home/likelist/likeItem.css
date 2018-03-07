@@ -1,0 +1,54 @@
+.like_item{
+    width:100%;
+    padding: 10px;
+    border-bottom: 1px #cccccc solid;
+}
+.clearfix:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+.left{
+    float: left;
+    width:125px;
+}
+
+.content{
+    float:left;
+    width:220px;
+    padding:0 10px ;
+}
+
+.title{
+    float:left;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.distance{
+    float: right;
+    font-size: 12px;
+    line-height: 21px;
+    color:grey;
+}
+
+.subTitle{
+    margin-top:10px;
+    margin-bottom: 1.5em;
+    font-size: 14px;
+}
+
+.price{
+    float:left;
+    color:red;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mumber{
+    float: right;
+    color:grey;
+    font-size: 14px;
+}

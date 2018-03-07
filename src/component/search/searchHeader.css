@@ -1,0 +1,19 @@
+.search_header{
+    background-color: rgb(233,32,61);
+    padding:10px ;
+
+}
+
+.search_header .icon-chevron-left{
+    color: white;
+    float: left;
+    margin-top: 10px;
+}
+
+.search_header .search_input{
+    display: flex;
+    justify-content: center;
+}
+
+
+

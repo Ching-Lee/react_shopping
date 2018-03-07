@@ -1,0 +1,29 @@
+.home_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(233,32,61);
+    padding: 10px;
+    color:#fff;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.left_header a{
+    text-decoration:none;
+    color:#fff;
+}
+
+.left_header a:hover{
+    color:gray ;
+}
+.left_header{
+    width: 60px;
+}
+
+
+.right_header{
+    width:30px;
+    text-align: right;
+}
+

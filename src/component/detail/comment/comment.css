@@ -1,0 +1,18 @@
+.comment{
+    padding:10px;
+    border-top: solid 1em #f1f1f1 ;
+}
+.comment h4{
+    margin-top: 0px;
+}
+.comment_info p{
+    margin: 0;
+}
+
+.comment_info{
+    margin-bottom: 2em;
+}
+
+.comment_content{
+    color: grey;
+}

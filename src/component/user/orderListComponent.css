@@ -1,0 +1,38 @@
+.orderContainer{
+    border-bottom: solid 1px #ccc;
+    padding: 10px;
+}
+.order{
+    display:flex;
+    align-items: center;
+
+}
+
+.order img{
+    width:30%;
+}
+
+.order section{
+    flex:1;
+}
+
+.order p{
+    margin: 0.5em ;
+}
+
+.orderContainer button{
+    width:20%;
+    background-color: rgb(233,32,61);
+    color: white;
+    font-size: 16px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+}
+
+.order_comment textarea{
+    width: 100%;
+    height: 5rem;
+    margin-top: 0.5rem;
+}
+
