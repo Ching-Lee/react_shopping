@@ -29,7 +29,6 @@ export default class LoginComponent extends React.Component {
     }
 
     render() {
-        const params = this.props.params;
         return (
             <div className='login-container'>
                 <div className='input-container phone-container'>

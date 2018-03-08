@@ -5,7 +5,7 @@ import * as userInfoActions from '../action/userInfoActions';
 import PageHeader from "../component/common/pageHeader";
 import {hashHistory} from 'react-router'
 import LoginComponent from "../component/login/loginComponent";
-
+import * as storeActions from '../action/storeActions';
 
 
 class Login extends React.Component {
@@ -36,17 +36,20 @@ class Login extends React.Component {
     }
      //登录成功之后的业务处理
     loginHandle(username){
-        //保存用户名
+        if(username=='')
+            return;
+        //保存用户名到redux
         const actions=this.props.userInfoActions;
         let userinfo=this.props.userinfo;
         userinfo.username=username;
-        if(username=='')
-            return;
-
         actions.update(userinfo);
-
+        //保存用户名到localstorage
+        localStorage.username=username;
+        //有了登录信息，就可以去获取收藏列表
+        this.props.storeActions.getInitStore(this.props.userinfo.username);
         //跳转连接
         const params=this.props.params;
+        console.log("登录页面跳转返回连接"+params);
         const router=params.router;
         if(router)
             hashHistory.push('/'+router);
@@ -79,7 +82,8 @@ class Login extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        userinfo: state.userinfo
+        userinfo: state.userinfo,
+        store:state.store
     }
 }
 
@@ -87,6 +91,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         userInfoActions: bindActionCreators(userInfoActions, dispatch),
+        storeActions: bindActionCreators(storeActions, dispatch)
     }
 }
 

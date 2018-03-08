@@ -6,11 +6,13 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux';
 import * as storeActions from '../../../action/storeActions';
 
+
 class Store extends React.Component {
     constructor(props) {
         super(props);
         this.state = {isStore: false}
     }
+
 
 
     //验证是否登录
@@ -35,13 +37,12 @@ class Store extends React.Component {
             return;
         //收藏的流程
         const id = this.props.id;
-        const actions=this.props.storeActions;
         //判断当前页面是否收藏，如果收藏，就取消
         if (this.state.isStore) {
-            actions.remove({id: id});
-            this.setState({isStore: false});
+           this.props.storeActions.removeStore({id: id});
+           this.setState({isStore: false});
         } else {
-            actions.add({id: id});
+            this.props.storeActions.addStore({id: id});
             this.setState({isStore: true});
         }
 
@@ -63,18 +64,19 @@ class Store extends React.Component {
     }
 
     componentDidMount() {
+
+
         this.checkStoreState();
 
     }
 
-    //检验当前商户是否被收藏
+    //检验当前商品是否被收藏
     checkStoreState() {
         //从父组件传递过来的
         const id = this.props.id;
-        //从redux拿到所有收藏列表
-        const store = this.props.store;
+
         //some函数只要有一个满足即可
-        store.some(item => {
+        this.props.store.some(item => {
                 if (item.id === id) {
                     this.setState({isStore: true});
                     return true;

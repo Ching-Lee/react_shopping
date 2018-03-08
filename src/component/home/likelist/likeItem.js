@@ -7,7 +7,7 @@ export default class LikeItem extends React.Component {
         return (
             <div className='like_item clearfix'>
                 <Link to={`/detail/${this.props.item.id}`}>
-                    <img src={this.props.item.img} className='left'/>
+                    <img src={this.props.item.img} className='left' alt={this.props.item.title}/>
                     <div className='content'>
                         <div className='clearfix'>
                             <span className='title'>{this.props.item.title}</span>

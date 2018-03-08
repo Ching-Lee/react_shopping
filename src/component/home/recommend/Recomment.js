@@ -20,7 +20,7 @@ export default class Recomment extends React.Component {
             ad.map((adItem, index) => (
                 <li key={index} style={{width:'120px',listStyle:'none',paddingTop:'10px',textAlign:'center'}}>
                     <h4 style={{color:colors[index],margin:'0px'}}>{adItem.title}</h4>
-                    <img src={adItem.img} style={{width:'120px'}} />
+                    <img src={adItem.img} style={{width:'120px'}} alt={adItem.title}/>
                 </li>
             ))
 

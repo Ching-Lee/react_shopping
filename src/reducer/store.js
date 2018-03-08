@@ -1,9 +1,10 @@
 
+
 const initialState =[];
 //收藏创建的规则
 export default function store(state=initialState,action) {
     switch (action.type){
-        //修改城市名字
+        //
         case 'STORE_UPDATE':
             return action.data;
 

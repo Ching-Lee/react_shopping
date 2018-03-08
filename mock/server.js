@@ -102,6 +102,49 @@ router.post('/api/submitComment',koaBody ,async (ctx)=>{
 
 
 
+//获取所有的初始化收藏内容
+router.get('/api/store/getStore/:username',  async (ctx) =>  {
+    console.log('收藏内容初始化');
+
+    const params = ctx.params;
+    const username = params.username;
+    console.log('用户名：' + username);
+
+    ctx.body = [{'id':'1377777'}];
+});
+
+
+//删除收藏内容
+router.get('/api/store/removeStore/:item',async (ctx) =>  {
+        console.log('删除收藏');
+
+        const params = ctx.params;
+        const item = params.item;
+        console.log('参数：' + item.id);
+
+        ctx.body = true;
+    }
+);
+
+
+
+
+//添加收藏内容
+router.get('/api/store/addStore/:item',async (ctx) =>  {
+        console.log('添加收藏');
+
+        const params = ctx.params;
+        const item = params.item;
+        console.log('参数：' + item);
+
+        ctx.body = true;
+    }
+);
+
+
+
+
+
 /*
 router.post('/api/post',koaBody,async (ctx) => {
     ctx.body = JSON.stringify(this.request.body);
