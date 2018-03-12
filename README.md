@@ -4,7 +4,7 @@
 实现过程博客地址：https://www.jianshu.com/p/a81d473bba71
 
 ## 技术栈：
-前端：React 15.6.2、React-Router 2.8.1、 react-swipe（轮播插件）、redux(各个组件之间共享数据)、redux-thunk(异步数据的发送)
+前端：react 15.6.2、react-router 2.8.1、react-swipe（轮播插件）、react-redux(各个组件之间共享数据)、redux-thunk(异步数据的发送)
 
 前后台数据交互：fetch
 
